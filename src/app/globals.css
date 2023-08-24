@@ -1,23 +1,35 @@
+/**
+ * File: pinecone-vercel-starter/src/app/globals.css
+ * 
+ * This file is responsible for the global styling of the application. It uses Tailwind CSS for utility classes
+ * and custom CSS variables for color theming. The color scheme can be switched between light and dark mode.
+ */
+
+// Importing base, components, and utilities from Tailwind CSS
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+// Defining color variables for light mode
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --foreground-rgb: 38, 38, 38; 
+  --background-start-rgb: 245, 245, 255; 
   --background-end-rgb: 255, 255, 255;
 }
 
+// Defining color variables for dark mode
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 235, 235, 235; 
+    --background-start-rgb: 25, 25, 35; 
+    --background-end-rgb: 35, 35, 45;
   }
 }
 
+// Applying color variables to body element
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--foreground-rgb)); // Text color
+  // Background gradient from start color to end color
   background: linear-gradient(
       to bottom,
       transparent,
@@ -25,3 +37,4 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+

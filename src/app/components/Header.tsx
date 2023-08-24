@@ -1,6 +1,9 @@
+// File Path: pinecone-vercel-starter/src/app/components/Header.tsx
+// This file defines the Header component of the application. It imports the PWRD AI image and displays it in the header.
+// The header is styled with tailwind CSS classes and the className prop is used to allow additional styles to be passed in.
+
 import Image from "next/image";
-import PineconeLogo from "../../../public/pinecone.svg";
-import VercelLogo from "../../../public/vercel.svg";
+import PWRDAIlogo from "../../../public/pwrdai-logo1.png";
 
 export default function Header({ className }: { className?: string }) {
   return (
@@ -8,20 +11,15 @@ export default function Header({ className }: { className?: string }) {
       className={`flex items-center justify-center text-gray-200 text-2xl ${className}`}
     >
       <Image
-        src={PineconeLogo}
+        src={PWRDAIlogo}
         alt="pinecone-logo"
         width="230"
         height="50"
         className="ml-3"
-      />{" "}
-      <div className="text-4xl ml-3 mr-3">+</div>
-      <Image
-        src={VercelLogo}
-        alt="vercel-logo"
-        width="160"
-        height="50"
-        className="mr-3 mt-3"
       />
     </header>
   );
 }
+
+
+

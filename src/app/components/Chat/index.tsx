@@ -1,4 +1,5 @@
-// Chat.tsx
+// File: pinecone-vercel-starter/src/app/components/Chat/index.tsx
+// This file contains the Chat component which handles the chat interface and its functionalities.
 
 import React, { FormEvent, ChangeEvent } from "react";
 import Messages from "./Messages";

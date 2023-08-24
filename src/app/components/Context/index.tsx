@@ -1,3 +1,14 @@
+/**
+ * File: pinecone-vercel-starter/src/app/components/Context/index.tsx
+ * 
+ * This file defines the Context component which is a functional component in React.
+ * It manages the state and behavior of the application, including the entries and cards,
+ * the splitting method, chunk size, overlap, and the scroll behavior to the selected card.
+ * It also defines the DropdownLabel component and the buttons for each entry.
+ * 
+ * The Context component returns a div element that contains the buttons, the Clear Index button,
+ * and the controls for the splitting method, chunk size, and overlap.
+ */
 import React, { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { urls } from "./urls";
 import UrlButton from "./UrlButton";
@@ -5,25 +16,30 @@ import { Card, ICard } from "./Card";
 import { clearIndex, crawlDocument } from "./utils";
 
 import { Button } from "./Button";
+// Define the properties for the Context component
 interface ContextProps {
   className: string;
   selected: string[] | null;
 }
 
+// Define the Context component
 export const Context: React.FC<ContextProps> = ({ className, selected }) => {
+  // State for the entries and cards
   const [entries, setEntries] = useState(urls);
   const [cards, setCards] = useState<ICard[]>([]);
 
+  // State for the splitting method, chunk size, and overlap
   const [splittingMethod, setSplittingMethod] = useState("markdown");
   const [chunkSize, setChunkSize] = useState(256);
   const [overlap, setOverlap] = useState(1);
 
-  // Scroll to selected card
+  // Scroll to the selected card
   useEffect(() => {
     const element = selected && document.getElementById(selected[0]);
     element?.scrollIntoView({ behavior: "smooth" });
   }, [selected]);
 
+  // Define the DropdownLabel component
   const DropdownLabel: React.FC<
     React.PropsWithChildren<{ htmlFor: string }>
   > = ({ htmlFor, children }) => (
@@ -32,6 +48,7 @@ export const Context: React.FC<ContextProps> = ({ className, selected }) => {
     </label>
   );
 
+  // Create the buttons for each entry
   const buttons = entries.map((entry, key) => (
     <div className="" key={`${key}-${entry.loading}`}>
       <UrlButton
@@ -50,6 +67,7 @@ export const Context: React.FC<ContextProps> = ({ className, selected }) => {
     </div>
   ));
 
+  // Return the Context component
   return (
     <div
       className={`flex flex-col border-2 overflow-y-auto rounded-lg border-gray-500 w-full ${className}`}

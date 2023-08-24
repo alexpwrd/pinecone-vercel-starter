@@ -1,18 +1,21 @@
-export const urls = [{
-  url: "https://e360.yale.edu/digest/indonesia-malaysia-deforestation",
-  title: "Indonesia Deforestation",
+export const urls = [
+
+{
+  url: "https://secure.toronto.ca/council/report.do?meeting=2023.CC9&type=minutes",
+  title: "Meeting No.: 9 (Special), August 10, 2023",
   seeded: false,
   loading: false,
 },
 {
-  url: "https://cleantechnica.com/2023/06/29/solar-82-of-power-capacity-growth-in-india-in-2022/",
-  title: "Solar Power in India",
+  url: "https://secure.toronto.ca/council/report.do?meeting=2023.CC8&type=minutes",
+  title: "Meeting No.: 8, July 19",
   seeded: false,
   loading: false,
 },
 {
-  url: "https://www.cbssports.com/nba/news/matisse-thybulle-to-stay-with-blazers-who-match-mavericks-three-year-33-million-deal-per-report/",
-  title: "Matisee Thybulle",
+  url: "https://secure.toronto.ca/council/report.do?meeting=2023.CC7&type=minutes",
+  title: "Meeting No.: 7, June 14",
   seeded: false,
   loading: false,
-}]
+}
+]

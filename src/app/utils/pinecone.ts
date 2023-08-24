@@ -1,3 +1,8 @@
+// File Path: pinecone-vercel-starter/src/app/utils/pinecone.ts
+// This file contains utility functions for interacting with the Pinecone database. 
+// It includes the function `getPineconeClient` which initializes and returns a Pinecone client, 
+// and the function `getMatchesFromEmbeddings` which retrieves matches for the given embeddings from the Pinecone database.
+
 import { PineconeClient, ScoredVector } from "@pinecone-database/pinecone";
 
 let pinecone: PineconeClient | null = null;
