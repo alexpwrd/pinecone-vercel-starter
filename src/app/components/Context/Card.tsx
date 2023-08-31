@@ -25,22 +25,25 @@ interface ICardProps {
 }
 
 // The Card component
-export const Card: FC<ICardProps> = ({ card, selected }) => (
-  <div
-    id={card.metadata.hash} // Use the card's hash as the id
-    className={`card w-full p-5 m-2 text-white ${
-      // Change the card's appearance based on whether it is selected or not
-      selected && selected.includes(card.metadata.hash)
-        ? "bg-gray-600"
-        : "bg-gray-800"
-    } ${
-      selected && selected.includes(card.metadata.hash)
-        ? "border-double border-4 border-sky-500"
-        : "opacity-60 hover:opacity-80 transition-opacity duration-300 ease-in-out"
-    }`}
-  >
-    <ReactMarkdown>{card.pageContent}</ReactMarkdown> // Render the card's markdown content
-    <b className="text-xs">{card.metadata.hash}</b> // Display the card's hash
-  </div>
-);
+export const Card: FC<ICardProps> = ({ card, selected }) => {
+  return (
+    <div
+      id={card.metadata.hash} // Use the card's hash as the id
+      className={`card w-full p-5 m-2 text-white ${
+        // Change the card's appearance based on whether it is selected or not
+        selected && selected.includes(card.metadata.hash)
+          ? "bg-gray-600"
+          : "bg-gray-800"
+      } ${
+        selected && selected.includes(card.metadata.hash)
+          ? "border-double border-4 border-sky-500"
+          : "opacity-60 hover:opacity-80 transition-opacity duration-300 ease-in-out"
+      }`}
+    >
+      <ReactMarkdown>{card.pageContent}</ReactMarkdown> // Render the card's markdown content
+      <b className="text-xs">{card.metadata.hash}</b> // Display the card's hash
+    </div>
+  );
+};
+
 

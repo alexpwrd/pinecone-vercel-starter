@@ -1,0 +1,457 @@
+- ready started server on 0.0.0.0:3000, url: http://localhost:3000
+- [36minfo[39m Loaded env from /Users/vlad/Dropbox/CODE/pwrdai-chat/.env.local
+- [35mevent[39m compiled client and server successfully in 298 ms (20 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 83 ms (20 modules)
+- [36mwait[39m compiling /page (client and server)...
+- [35mevent[39m compiled client and server successfully in 1400 ms (2231 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 110 ms (1111 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 244 ms (1164 modules)
+- [36mwait[39m compiling /api/crawl/route (client and server)...
+- [35mevent[39m compiled successfully in 307 ms (285 modules)
+Received request to crawl url:  with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: 
+Starting seed function with url: , limit: 1, indexName: pwrdai-pvs
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Added URL to queue: . Total URLs in queue: 1
+Dequeued URL: . Current depth: 0
+No content fetched for URL: 
+Crawled pages: 
+Seed function completed successfully
+Sent 0 vectors to Pinecone.
+Successfully crawled url: 
+- [36mwait[39m compiling /api/clearIndex/route (client and server)...
+- [35mevent[39m compiled successfully in 263 ms (1249 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Pinecone client obtained
+Index obtained
+Index cleared
+
+-  [90m┌[39m [36mPOST[39m /api/clearIndex 200 in [33m606ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m208ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m206ms[39m (cache: [33mMISS[39m)
+
+Pinecone client obtained
+Index obtained
+Index cleared
+
+-  [90m┌[39m [36mPOST[39m /api/clearIndex 200 in [32m89ms[39m
+   [90m│[39m
+   [90m└────[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m72ms[39m (cache: [33mMISS[39m)
+
+Received request to crawl url: https://www.infokus.io with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: https://www.infokus.io
+Starting seed function with url: https://www.infokus.io, limit: 1, indexName: pwrdai-pvs
+Added URL to queue: https://www.infokus.io. Total URLs in queue: 1
+Dequeued URL: https://www.infokus.io. Current depth: 0
+Successfully crawled URL: https://www.infokus.io
+Added 31 new URLs to queue. Total URLs in queue: 31
+Crawled pages: https://www.infokus.io
+Seed function completed successfully
+Sent 35 vectors to Pinecone.
+Successfully crawled url: https://www.infokus.io
+- [36mwait[39m compiling /api/chat/route (client and server)...
+- [35mevent[39m compiled successfully in 153 ms (292 modules)
+Messages received:  [ { role: 'user', content: 'who works at infokus' } ]
+Last message received:  { role: 'user', content: 'who works at infokus' }
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      About the team\n\nInfokus was born out of the passion for spreading useful, life-changing ideas and emphasizing an evidence-based approach. Our goal is to help your discoveries stand out, delivering relevant information and educating people across the globe.\n\nwork with us\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b70151ebded3ffe37d5_Button%20blur.png)![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b702f52f68f670cc9d6_Star%201.png)\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/6308ef3744bc6862a1dbaa14_photo_2022-08-26_16-28-25.jpg)\n\n##### Victoria Puzach\n\nFounder and CEO\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/624f262566e1c99c88c97986_05471125-582B-4195-8252-B9E759FBE810_1_105_c%201.jpg)\n\n##### Anastasia Friedrikhson\n\nCreative Director\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/624f262566e1c900bcc97988_image%2010.jpg)\n\n#####\nWe\'ll manage the rest.\n\nThe world needs your discoveries and knowledge. We help you and your ideas be front and center.\n\nWe deliver results by using our multi-year collective expertise in digital marketing, latest AI technology, design, e-learning, PR, and web development.\n\nInfokus team is a partner who helps you maximize your impact and minimize your time investment.\n\nIt all begins with a single query:: What are your aspirations?\n\nfree   \ndiscovery   \ncall\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b70151ebded3ffe37d5_Button%20blur.png)![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b702f52f68f670cc9d6_Star%201.png)\n\nfree discovery call\n\n##\nWhere is your team and company based?\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b71a96406a708e6b2d8_Plus.png)\n\nInfokus Inc is registered in Delaware, United States and serves international clients across the world. Our team is global and fully remote (this allows us to avoid adding office and other HR maintenance costs to your invoices). Team members are working from Estonia, Spain, Portugal, Germany, United States, Ukraine (those who are not able to leave the country), and Mexico.\n\n! Due to the Russian invasion of Ukraine, we are aiming to provide more paid opportunities to Ukrainian digital specialists who are left without a job and are ready to continue working remotely to support their families and the country. Every new Infokus project will be hiring and providing support to Ukrainians. #StandWithUkraine #HireUkrainians\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/624f268d51b25210b49da84c_light%20logo.png)\n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+- [36mwait[39m compiling /api/context/route (client and server)...
+- [35mevent[39m compiled successfully in 258 ms (1294 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+
+-  [90m┌[39m [36mPOST[39m /api/context 200 in [31m3310ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m261ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m├── 1 level ──[39m [36mGET[39m https://controller.us-we../databases 200 in [33m820ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mPOST[39m https://pwrdai-pvs-8fbf1../query 200 in [32m455ms[39m (cache: [33mMISS[39m)
+
+Messages received:  [
+  { role: 'user', content: 'who works at infokus' },
+  {
+  role: 'assistant',
+  content: 'The Infokus team includes Victoria Puzach, the Founder and CEO, and Anastasia Friedrikhson, the Creative Director. The company is made up of a global and fully remote team with members working from Estonia, Spain, Portugal, Germany, the United States, Ukraine, and Mexico. This diversity allows them to serve international clients across the world.'
+},
+  { role: 'user', content: 'what kind of services can you offer?' }
+]
+Last message received:  { role: 'user', content: 'what kind of services can you offer?' }
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      Do you offer marketing consulting services?\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b71a96406a708e6b2d8_Plus.png)\n\nYes, we do. During the free discovery call we will learn more about your products and will let you know if our team has the expertise to consult you on an hourly basis.\n\n![](https://uploads-ssl.webflow.com/plugins/Basic/assets/placeholder.60f9b1840c.svg)\n\n####\nPricing\n\nEach of our partnerships with clients starts with their unique challenge and custom business proposal. The packages below can give you an initial idea about our pricing.\n\n###\nSUPPORT & OPTIMIZATION\n\nOur role extends beyond the first results stage. We offer ongoing support to ensure you’re receiving optimal audience engagement. We’ll be able deal with performance monitoring and improvements as you continue to grow and expand.\n\n# Achieve your goals with a stronger digital presence\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/623b103b05de648299a1c7d6_black%20dot.png)\n\nGreater circulation of your ideas, research findings,   \nand achievements\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/623b103b05de648299a1c7d6_black%20dot.png)\n\nBigger audience and potential students\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/623b103b05de648299a1c7d6_black%20dot.png)\n\nExpanded influence\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/623b103b05de648299a1c7d6_black%20dot.png)\n\nGet invted to speak on podcasts, interviews, and conferences\n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+
+-  [90m┌[39m [36mPOST[39m /api/context 200 in [31m2366ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../databases 200 in [33m636ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mPOST[39m https://pwrdai-pvs-8fbf1../query 200 in [32m313ms[39m (cache: [33mMISS[39m)
+
+Messages received:  [
+  { role: 'user', content: 'who works at infokus' },
+  {
+  role: 'assistant',
+  content: 'The Infokus team includes Victoria Puzach, the Founder and CEO, and Anastasia Friedrikhson, the Creative Director. The company is made up of a global and fully remote team with members working from Estonia, Spain, Portugal, Germany, the United States, Ukraine, and Mexico. This diversity allows them to serve international clients across the world.'
+},
+  { role: 'user', content: 'what kind of services can you offer?' },
+  {
+  role: 'assistant',
+  content: 'Based on the information available, we offer various services including marketing consulting services and continuous support and optimization for your digital presence. This process can involve performance monitoring and constant improvements based on your growth and evolving needs. Our ultimate goal is to help you achieve a stronger digital presence, enabling wider circulation of your ideas and findings, reaching a bigger audience, expanding your influence, and getting you more opportunities to speak on platforms like podcasts, interviews, and conferences. Please note, specific services offered can be tailored to your unique needs as determined during our free discovery call.'
+},
+  {
+  role: 'user',
+  content: 'what would you recommend to start with if i want to grow my social media following?'
+}
+]
+Last message received:  {
+  role: 'user',
+  content: 'what would you recommend to start with if i want to grow my social media following?'
+}
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      Starter\n\nEstablish yourself with an authentic brand identity in digital media.\n\n####\nGrowth\n\nExpand upon your achievements with a focus on your digital presence growth.  \n‍\n\n####\nSUPPORT & OPTIMIZATION\n\nOur role extends beyond the first results stage. We offer ongoing support to ensure you’re receiving optimal audience engagement. We’ll be able deal with performance monitoring and improvements as you continue to grow and expand.\n\n# Achieve your goals with a stronger digital presence\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/623b103b05de648299a1c7d6_black%20dot.png)\n\nGreater circulation of your ideas, research findings,   \nand achievements\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/623b103b05de648299a1c7d6_black%20dot.png)\n\nBigger audience and potential students\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/623b103b05de648299a1c7d6_black%20dot.png)\n\nExpanded influence\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/623b103b05de648299a1c7d6_black%20dot.png)\n\nGet invted to speak on podcasts, interviews, and conferences\n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+
+-  [90m┌[39m [36mPOST[39m /api/context 200 in [31m2520ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../databases 200 in [33m704ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mPOST[39m https://pwrdai-pvs-8fbf1../query 200 in [32m336ms[39m (cache: [33mMISS[39m)
+
+Pinecone client obtained
+Index obtained
+Index cleared
+
+-  [90m┌[39m [36mPOST[39m /api/clearIndex 200 in [32m267ms[39m
+   [90m│[39m
+   [90m└────[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m228ms[39m (cache: [33mMISS[39m)
+
+- [36mwait[39m compiling...
+- [36mwait[39m compiling /_error (client and server)...
+- [36mwait[39m compiling...
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 861 ms (2364 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 193 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 193 ms (2408 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 391 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 572 ms (2364 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 166 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 296 ms (2408 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 221 ms (2408 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 245 ms (2408 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 355 ms (2364 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 89 ms (1191 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 250 ms (2408 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 251 ms (2364 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 71 ms (1191 modules)
+Received request to crawl url: https://www.infokus.io/ with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: https://www.infokus.io/
+Starting seed function with url: https://www.infokus.io/, limit: 1, indexName: pwrdai-pvs
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Added URL to queue: https://www.infokus.io/. Total URLs in queue: 1
+Dequeued URL: https://www.infokus.io/. Current depth: 0
+Successfully crawled URL: https://www.infokus.io/
+Added 31 new URLs to queue. Total URLs in queue: 31
+Crawled pages: https://www.infokus.io/
+Seed function completed successfully
+Sent 35 vectors to Pinecone.
+Successfully crawled url: https://www.infokus.io/
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 835 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 1 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled successfully in 0 ms (1147 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 309 ms (1191 modules)
+- [36mwait[39m compiling /api/clearIndex/route (client and server)...
+- [35mevent[39m compiled successfully in 175 ms (1276 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Pinecone client obtained
+Index obtained
+Index cleared
+
+-  [90m┌[39m [36mPOST[39m /api/clearIndex 200 in [32m447ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m190ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m200ms[39m (cache: [33mMISS[39m)
+
+Received request to crawl url: https://www.infokus.io/ with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: https://www.infokus.io/
+Starting seed function with url: https://www.infokus.io/, limit: 1, indexName: pwrdai-pvs
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Added URL to queue: https://www.infokus.io/. Total URLs in queue: 1
+Dequeued URL: https://www.infokus.io/. Current depth: 0
+Successfully crawled URL: https://www.infokus.io/
+Added 31 new URLs to queue. Total URLs in queue: 31
+Crawled pages: https://www.infokus.io/
+Seed function completed successfully
+Sent 35 vectors to Pinecone.
+Successfully crawled url: https://www.infokus.io/
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 600 ms (2364 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 69 ms (1191 modules)
+- [36mwait[39m compiling /api/clearIndex/route (client and server)...
+- [35mevent[39m compiled successfully in 84 ms (1276 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Pinecone client obtained
+Index obtained
+Index cleared
+
+-  [90m┌[39m [36mPOST[39m /api/clearIndex 200 in [33m636ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m300ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m271ms[39m (cache: [33mMISS[39m)
+
+Received request to crawl url: https://www.infokus.io/ with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: https://www.infokus.io/
+Starting seed function with url: https://www.infokus.io/, limit: 1, indexName: pwrdai-pvs
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Added URL to queue: https://www.infokus.io/. Total URLs in queue: 1
+Dequeued URL: https://www.infokus.io/. Current depth: 0
+Successfully crawled URL: https://www.infokus.io/
+Added 31 new URLs to queue. Total URLs in queue: 31
+Crawled pages: https://www.infokus.io/
+Seed function completed successfully
+Sent 35 vectors to Pinecone.
+Successfully crawled url: https://www.infokus.io/
+Messages received:  [ { role: 'user', content: 'who works at infokus' } ]
+Last message received:  { role: 'user', content: 'who works at infokus' }
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      About the team\n\nInfokus was born out of the passion for spreading useful, life-changing ideas and emphasizing an evidence-based approach. Our goal is to help your discoveries stand out, delivering relevant information and educating people across the globe.\n\nwork with us\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b70151ebded3ffe37d5_Button%20blur.png)![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b702f52f68f670cc9d6_Star%201.png)\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/6308ef3744bc6862a1dbaa14_photo_2022-08-26_16-28-25.jpg)\n\n##### Victoria Puzach\n\nFounder and CEO\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/624f262566e1c99c88c97986_05471125-582B-4195-8252-B9E759FBE810_1_105_c%201.jpg)\n\n##### Anastasia Friedrikhson\n\nCreative Director\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/624f262566e1c900bcc97988_image%2010.jpg)\n\n#####\nWe\'ll manage the rest.\n\nThe world needs your discoveries and knowledge. We help you and your ideas be front and center.\n\nWe deliver results by using our multi-year collective expertise in digital marketing, latest AI technology, design, e-learning, PR, and web development.\n\nInfokus team is a partner who helps you maximize your impact and minimize your time investment.\n\nIt all begins with a single query:: What are your aspirations?\n\nfree   \ndiscovery   \ncall\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b70151ebded3ffe37d5_Button%20blur.png)![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b702f52f68f670cc9d6_Star%201.png)\n\nfree discovery call\n\n##\nWhere is your team and company based?\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b71a96406a708e6b2d8_Plus.png)\n\nInfokus Inc is registered in Delaware, United States and serves international clients across the world. Our team is global and fully remote (this allows us to avoid adding office and other HR maintenance costs to your invoices). Team members are working from Estonia, Spain, Portugal, Germany, United States, Ukraine (those who are not able to leave the country), and Mexico.\n\n! Due to the Russian invasion of Ukraine, we are aiming to provide more paid opportunities to Ukrainian digital specialists who are left without a job and are ready to continue working remotely to support their families and the country. Every new Infokus project will be hiring and providing support to Ukrainians. #StandWithUkraine #HireUkrainians\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/624f268d51b25210b49da84c_light%20logo.png)\n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 587 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 264 ms (2364 modules)
+- [36mwait[39m compiling /api/clearIndex/route (client and server)...
+- [35mevent[39m compiled successfully in 85 ms (1273 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Pinecone client obtained
+Index obtained
+Index cleared
+
+-  [90m┌[39m [36mPOST[39m /api/clearIndex 200 in [33m543ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m249ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m217ms[39m (cache: [33mMISS[39m)
+
+Received request to crawl url: https://www.infokus.io/ with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: https://www.infokus.io/
+Starting seed function with url: https://www.infokus.io/, limit: 1, indexName: pwrdai-pvs
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Added URL to queue: https://www.infokus.io/. Total URLs in queue: 1
+Dequeued URL: https://www.infokus.io/. Current depth: 0
+Successfully crawled URL: https://www.infokus.io/
+Added 31 new URLs to queue. Total URLs in queue: 31
+Crawled pages: https://www.infokus.io/
+Seed function completed successfully
+Sent 35 vectors to Pinecone.
+Successfully crawled url: https://www.infokus.io/
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 546 ms (2364 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 78 ms (1191 modules)
+Received request to crawl url:  with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: 
+Starting seed function with url: , limit: 1, indexName: pwrdai-pvs
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Added URL to queue: . Total URLs in queue: 1
+Dequeued URL: . Current depth: 0
+No content fetched for URL: 
+Crawled pages: 
+Seed function completed successfully
+Sent 0 vectors to Pinecone.
+Successfully crawled url: 
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 229 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 374 ms (2364 modules)
+- [36mwait[39m compiling /favicon.ico/route (client and server)...
+- [35mevent[39m compiled successfully in 92 ms (1191 modules)
+Received request to crawl url: https://www.infokus.io/ with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: https://www.infokus.io/
+Starting seed function with url: https://www.infokus.io/, limit: 1, indexName: pwrdai-pvs
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Added URL to queue: https://www.infokus.io/. Total URLs in queue: 1
+Dequeued URL: https://www.infokus.io/. Current depth: 0
+Successfully crawled URL: https://www.infokus.io/
+Added 31 new URLs to queue. Total URLs in queue: 31
+Crawled pages: https://www.infokus.io/
+Seed function completed successfully
+Sent 35 vectors to Pinecone.
+Successfully crawled url: https://www.infokus.io/
+Messages received:  [ { role: 'user', content: 'who is the founder of infokus' } ]
+Last message received:  { role: 'user', content: 'who is the founder of infokus' }
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      About the team\n\nInfokus was born out of the passion for spreading useful, life-changing ideas and emphasizing an evidence-based approach. Our goal is to help your discoveries stand out, delivering relevant information and educating people across the globe.\n\nwork with us\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b70151ebded3ffe37d5_Button%20blur.png)![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b702f52f68f670cc9d6_Star%201.png)\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/6308ef3744bc6862a1dbaa14_photo_2022-08-26_16-28-25.jpg)\n\n##### Victoria Puzach\n\nFounder and CEO\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/624f262566e1c99c88c97986_05471125-582B-4195-8252-B9E759FBE810_1_105_c%201.jpg)\n\n##### Anastasia Friedrikhson\n\nCreative Director\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/624f262566e1c900bcc97988_image%2010.jpg)\n\n#####\nAmplifying the voice of authors, academicas, and thought leaders.\n\nFor general inquiries and feedback contact us at hi@infokus.io  \n\nInfokus 2023\n\nLinkedIn\n\nPrivacy Policy\nWe\'ll manage the rest.\n\nThe world needs your discoveries and knowledge. We help you and your ideas be front and center.\n\nWe deliver results by using our multi-year collective expertise in digital marketing, latest AI technology, design, e-learning, PR, and web development.\n\nInfokus team is a partner who helps you maximize your impact and minimize your time investment.\n\nIt all begins with a single query:: What are your aspirations?\n\nfree   \ndiscovery   \ncall\n\n![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b70151ebded3ffe37d5_Button%20blur.png)![](https://uploads-ssl.webflow.com/62262f05739a57e0f19c41e2/62373b702f52f68f670cc9d6_Star%201.png)\n\nfree discovery call\n\n##\n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+- [36mwait[39m compiling /api/context/route (client and server)...
+- [35mevent[39m compiled successfully in 256 ms (1319 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+
+-  [90m┌[39m [36mPOST[39m /api/context 200 in [31m2713ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m225ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m├── 1 level ──[39m [36mGET[39m https://controller.us-we../databases 200 in [33m637ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mPOST[39m https://pwrdai-pvs-8fbf1../query 200 in [32m341ms[39m (cache: [33mMISS[39m)
+
+- [36mwait[39m compiling /api/clearIndex/route (client and server)...
+- [35mevent[39m compiled successfully in 99 ms (1321 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Pinecone client obtained
+Index obtained
+Index cleared
+
+-  [90m┌[39m [36mPOST[39m /api/clearIndex 200 in [32m436ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m185ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m193ms[39m (cache: [33mMISS[39m)
+

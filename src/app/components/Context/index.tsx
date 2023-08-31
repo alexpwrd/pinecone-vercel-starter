@@ -28,16 +28,19 @@ export const Context: React.FC<ContextProps> = ({ className, selected }) => {
   const [entries, setEntries] = useState(urls);
   const [cards, setCards] = useState<ICard[]>([]);
 
+  // New state variable for the inputted URL
+  const [inputUrl, setInputUrl] = useState('');
+
   // State for the splitting method, chunk size, and overlap
   const [splittingMethod, setSplittingMethod] = useState("markdown");
   const [chunkSize, setChunkSize] = useState(256);
   const [overlap, setOverlap] = useState(1);
 
   // Scroll to the selected card
-  useEffect(() => {
-    const element = selected && document.getElementById(selected[0]);
-    element?.scrollIntoView({ behavior: "smooth" });
-  }, [selected]);
+useEffect(() => {
+  const element = selected && document.getElementById(selected[0]);
+  element?.scrollIntoView({ behavior: "smooth" });
+}, [selected]);
 
   // Define the DropdownLabel component
   const DropdownLabel: React.FC<
@@ -102,6 +105,7 @@ export const Context: React.FC<ContextProps> = ({ className, selected }) => {
             >
               <option value="recursive">Recursive Text Splitting</option>
               <option value="markdown">Markdown Splitting</option>
+              <option value="token">Token Splitting</option> {/* New option */}
             </select>
           </div>
           {splittingMethod === "recursive" && (
@@ -141,6 +145,30 @@ export const Context: React.FC<ContextProps> = ({ className, selected }) => {
           cards.map((card, key) => (
             <Card key={key} card={card} selected={selected} />
           ))}
+      </div>
+      <div className="flex items-center justify-center my-4">
+        <input
+          type="text"
+          value={inputUrl}
+          onChange={(e) => setInputUrl(e.target.value)}
+          placeholder="Enter URL"
+          className="p-2 flex-grow mr-2 rounded bg-gray-700 text-white"
+        />
+        <button
+          onClick={() =>
+            crawlDocument(
+              inputUrl,
+              setEntries,
+              setCards,
+              splittingMethod,
+              chunkSize,
+              overlap
+            )
+          }
+          className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Vectorize URL
+        </button>
       </div>
     </div>
   );

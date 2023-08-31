@@ -3,6 +3,7 @@
 
 import cheerio from 'cheerio';
 import { NodeHtmlMarkdown } from 'node-html-markdown';
+import logger from '../../utils/logger.ts'; // Import logger
 
 interface Page {
   url: string;
@@ -12,44 +13,56 @@ interface Page {
 class Crawler {
   private seen = new Set<string>();
   private pages: Page[] = [];
-  
   private queue: { url: string; depth: number }[] = [];
 
   // maxDepth and MaxPages
   constructor(private maxDepth = 0, private maxPages = 1) { }
 
   async crawl(startUrl: string): Promise<Page[]> {
+    // Add the start URL to the queue
     this.addToQueue(startUrl);
-
+    
+    // While there are URLs in the queue and we haven't reached the maximum number of pages...
     while (this.shouldContinueCrawling()) {
       const { url, depth } = this.queue.shift()!;
-      console.log(`Dequeued URL: ${url}. Current depth: ${depth}`);
+      logger.info(`Dequeued URL: ${url}. Current depth: ${depth}`);
 
+      // If the depth is too great or we've already seen this URL, skip it
       if (this.isTooDeep(depth)) {
-        console.log(`Skipping ${url} due to depth.`);
+        logger.info(`Skipping ${url} due to depth.`);
         continue;
       }
 
       if (this.isAlreadySeen(url)) {
-        console.log(`Skipping ${url} because it's already seen.`);
+        logger.info(`Skipping ${url} because it's already seen.`);
         continue;
       }
-
+      
+      // Add the URL to the set of seen URLs
       this.seen.add(url);
 
       const html = await this.fetchPage(url);
       if (!html) {
-        console.log(`No content fetched for URL: ${url}`);
+        logger.info(`No content fetched for URL: ${url}`);
         continue;
       }
 
-      console.log(`Successfully crawled URL: ${url}`);
+      logger.info(`Successfully crawled URL: ${url}`);
+
+      // Parse the HTML and add the page to the list of crawled pages
       this.pages.push({ url, content: this.parseHtml(html) });
+
+      // Extract new URLs from the page HTML and add them to the queue
       this.addNewUrlsToQueue(this.extractUrls(html, url), depth);
     }
-
+    
+    // Log the URLs of the crawled pages
+    logger.info(`Crawled pages: ${this.pages.map(page => page.url)}`);
+    
+    // Return the list of crawled pages
     return this.pages;
   }
+
 
   private isTooDeep(depth: number) {
     return depth > this.maxDepth;
@@ -65,12 +78,12 @@ class Crawler {
 
   private addToQueue(url: string, depth = 0) {
     this.queue.push({ url, depth });
-    console.log(`Added URL to queue: ${url}. Total URLs in queue: ${this.queue.length}`);
+    logger.info(`Added URL to queue: ${url}. Total URLs in queue: ${this.queue.length}`);
   }
 
   private addNewUrlsToQueue(urls: string[], depth: number) {
     this.queue.push(...urls.map(url => ({ url, depth: depth + 1 })));
-    console.log(`Added ${urls.length} new URLs to queue. Total URLs in queue: ${this.queue.length}`);
+    logger.info(`Added ${urls.length} new URLs to queue. Total URLs in queue: ${this.queue.length}`);
   }
 
   private async fetchPage(url: string): Promise<string> {
@@ -78,7 +91,7 @@ class Crawler {
       const response = await fetch(url);
       return await response.text();
     } catch (error) {
-      console.error(`Failed to fetch ${url}: ${error}`);
+      logger.error(`Failed to fetch ${url}: ${error}`);
       return '';
     }
   }
@@ -98,3 +111,4 @@ class Crawler {
 
 export { Crawler };
 export type { Page };
+

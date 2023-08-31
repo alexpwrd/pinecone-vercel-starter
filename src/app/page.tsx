@@ -97,4 +97,3 @@ const Page: React.FC = () => {
 
 // Export the page component
 export default Page;
-

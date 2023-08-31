@@ -77,3 +77,4 @@ export default function Messages({ messages }: { messages: Message[] }) {
     </div>
   );
 }
+

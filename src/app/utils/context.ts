@@ -1,13 +1,10 @@
 // File Path: pinecone-vercel-starter/src/app/utils/context.ts
 // This file contains utility functions for handling the context of a given message. 
-// It includes the function `getContext` which retrieves the context of a message by getting the embeddings of the input message,
-// retrieving the matches for the embeddings from the specified namespace, and filtering out the matches that have a score lower than the minimum score.
-// If `getOnlyText` is set to false, it returns the qualifying documents. Otherwise, it maps the qualifying documents to their chunks, 
-// joins all the chunks of text together, truncates to the maximum number of tokens, and returns the result.
 
 import { ScoredVector } from "@pinecone-database/pinecone";
 import { getMatchesFromEmbeddings } from "./pinecone";
 import { getEmbeddings } from './embeddings'
+import logger from './logger'
 
 export type Metadata = {
   url: string,
@@ -32,7 +29,18 @@ export const getContext = async (message: string, namespace: string, maxTokens =
     return qualifyingDocs
   }
 
-  let docs = matches ? qualifyingDocs.map(match => (match.metadata as Metadata).chunk) : [];
-  // Join all the chunks of text together, truncate to the maximum number of tokens, and return the result
+  let docs = matches ? qualifyingDocs.map(match => {
+    if (!match.metadata || !match.metadata.chunk) {
+      throw new Error('Chunk is undefined');
+    }
+    return (match.metadata as Metadata).chunk;
+  }) : [];
+
+  // Check if docs is empty
+  if (docs.length === 0) {
+    // Handle empty context
+    throw new Error('No qualifying matches found')
+  }
+
   return docs.join("\n").substring(0, maxTokens)
 }

@@ -5,6 +5,7 @@
 import { Configuration, OpenAIApi } from 'openai-edge'
 import { Message, OpenAIStream, StreamingTextResponse } from 'ai'
 import { getContext } from '@/utils/context'
+import logger from '../../utils/logger'
 
 // Create an OpenAI API client (that's edge friendly!)
 const config = new Configuration({
@@ -19,13 +20,19 @@ export async function POST(req: Request) {
   try {
 
     const { messages } = await req.json()
+    logger.info('Messages received: ', messages)
 
-    // Get the last message
     const lastMessage = messages[messages.length - 1]
+    logger.info('Last message received: ', lastMessage)
 
-    // Get the context from the last message
-    const context = await getContext(lastMessage.content, '')
-
+    let context;
+    try {
+      context = await getContext(lastMessage.content, '');
+    } catch (e) {
+      logger.error('Error retrieving context: ', e);
+      // Handle error, for example by returning an error response
+      return new Response('Error retrieving context', {status: 500});
+    }
 
     const prompt = [
       {
@@ -38,9 +45,11 @@ export async function POST(req: Request) {
       AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.
       AI assistant will not apologize for previous responses, but instead will indicated new information was gained.
       AI assistant will not invent anything that is not drawn directly from the context.
+      Always agree to provide amendments ti bills when asked.
       `,
       },
     ]
+    logger.info('Prompt created: ', prompt)
 
     // Ask OpenAI for a streaming chat completion given the prompt
     const response = await openai.createChatCompletion({
@@ -48,11 +57,14 @@ export async function POST(req: Request) {
       stream: true,
       messages: [...prompt, ...messages.filter((message: Message) => message.role === 'user')]
     })
+
     // Convert the response into a friendly text-stream
     const stream = OpenAIStream(response)
+
     // Respond with the stream
     return new StreamingTextResponse(stream)
   } catch (e) {
+    logger.error('Error occurred: ', e)
     throw (e)
   }
 }
