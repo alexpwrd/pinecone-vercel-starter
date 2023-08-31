@@ -455,3 +455,284 @@ Index cleared
    [90m│[39m
    [90m└── 1 level ──[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m193ms[39m (cache: [33mMISS[39m)
 
+- [36mwait[39m compiling...
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 541 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 310 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 195 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 288 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 182 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 286 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 160 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 205 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 261 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 195 ms (2364 modules)
+- [36mwait[39m compiling /api/clearIndex/route (client and server)...
+- [35mevent[39m compiled successfully in 410 ms (1273 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Pinecone client obtained
+Index obtained
+Index cleared
+
+-  [90m┌[39m [36mPOST[39m /api/clearIndex 200 in [33m607ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m282ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mDELETE[39m https://pwrdai-pvs-8fbf1../vectors/delete?deleteAll=true 200 in [32m251ms[39m (cache: [33mMISS[39m)
+
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 347 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 182 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 791 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 168 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 173 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 306 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 322 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 482 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 174 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 793 ms (2364 modules)
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 186 ms (2364 modules)
+Messages received:  [
+  { role: 'user', content: 'who is the founder of infokus' },
+  {
+  role: 'assistant',
+  content: 'The founder and CEO of Infokus is Victoria Puzach.'
+},
+  { role: 'user', content: 'hello' }
+]
+Last message received:  { role: 'user', content: 'hello' }
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Messages received:  [
+  { role: 'user', content: 'who is the founder of infokus' },
+  {
+  role: 'assistant',
+  content: 'The founder and CEO of Infokus is Victoria Puzach.'
+},
+  { role: 'user', content: 'hello' }
+]
+Last message received:  { role: 'user', content: 'hello' }
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Messages received:  [
+  { role: 'user', content: 'who is the founder of infokus' },
+  {
+  role: 'assistant',
+  content: 'The founder and CEO of Infokus is Victoria Puzach.'
+},
+  { role: 'user', content: 'hello' }
+]
+Last message received:  { role: 'user', content: 'hello' }
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Messages received:  [
+  { role: 'user', content: 'who is the founder of infokus' },
+  {
+  role: 'assistant',
+  content: 'The founder and CEO of Infokus is Victoria Puzach.'
+},
+  { role: 'user', content: 'find results' }
+]
+Last message received:  { role: 'user', content: 'find results' }
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 259 ms (1217 modules)
+- [36mwait[39m compiling /api/chat/route (client and server)...
+- [35mevent[39m compiled successfully in 134 ms (151 modules)
+Messages received:  [
+  { role: 'user', content: 'who is the founder of infokus' },
+  {
+  role: 'assistant',
+  content: 'The founder and CEO of Infokus is Victoria Puzach.'
+},
+  { role: 'user', content: 'hello' }
+]
+Last message received:  { role: 'user', content: 'hello' }
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      \n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+- [36mwait[39m compiling /api/context/route (client and server)...
+- [35mevent[39m compiled successfully in 332 ms (1316 modules)
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+
+-  [90m┌[39m [36mPOST[39m /api/context 200 in [31m2532ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../actions/whoami 200 in [32m197ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m├── 1 level ──[39m [36mGET[39m https://controller.us-we../databases 200 in [33m620ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mPOST[39m https://pwrdai-pvs-8fbf1../query 200 in [32m269ms[39m (cache: [33mMISS[39m)
+
+- [36mwait[39m compiling...
+- [35mevent[39m compiled client and server successfully in 137 ms (1217 modules)
+- [36mwait[39m compiling /api/chat/route (client and server)...
+- [35mevent[39m compiled successfully in 61 ms (151 modules)
+Messages received:  [
+  { role: 'user', content: 'who is the founder of infokus' },
+  {
+  role: 'assistant',
+  content: 'The founder and CEO of Infokus is Victoria Puzach.'
+},
+  { role: 'user', content: 'hello' },
+  { role: 'assistant', content: 'Hello! How can I assist you today?' },
+  { role: 'user', content: 'hi' }
+]
+Last message received:  { role: 'user', content: 'hi' }
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      \n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+
+-  [90m┌[39m [36mPOST[39m /api/context 200 in [31m2349ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../databases 200 in [33m639ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mPOST[39m https://pwrdai-pvs-8fbf1../query 200 in [32m263ms[39m (cache: [33mMISS[39m)
+
+Messages received:  [
+  { role: 'user', content: 'who is the founder of infokus' },
+  {
+  role: 'assistant',
+  content: 'The founder and CEO of Infokus is Victoria Puzach.'
+},
+  { role: 'user', content: 'hello' },
+  { role: 'assistant', content: 'Hello! How can I assist you today?' },
+  { role: 'user', content: 'hi' },
+  { role: 'assistant', content: 'Hello! How can I assist you today?' },
+  { role: 'user', content: 'who is victoria puzach' }
+]
+Last message received:  { role: 'user', content: 'who is victoria puzach' }
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      \n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+
+-  [90m┌[39m [36mPOST[39m /api/context 200 in [31m2269ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../databases 200 in [33m612ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mPOST[39m https://pwrdai-pvs-8fbf1../query 200 in [32m259ms[39m (cache: [33mMISS[39m)
+
+- [36mwait[39m compiling /api/crawl/route (client and server)...
+- [35mevent[39m compiled successfully in 49 ms (292 modules)
+Received request to crawl url: https://www.infokus.io/ with options: {"splittingMethod":"markdown","chunkSize":256,"overlap":1}
+Attempting to crawl url: https://www.infokus.io/
+Starting seed function with url: https://www.infokus.io/, limit: 1, indexName: pwrdai-pvs
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Added URL to queue: https://www.infokus.io/. Total URLs in queue: 1
+Dequeued URL: https://www.infokus.io/. Current depth: 0
+Successfully crawled URL: https://www.infokus.io/
+Added 31 new URLs to queue. Total URLs in queue: 31
+Crawled pages: https://www.infokus.io/
+Seed function completed successfully
+Sent 35 vectors to Pinecone.
+Successfully crawled url: https://www.infokus.io/
+Messages received:  [
+  { role: 'user', content: 'who is the founder of infokus' },
+  {
+  role: 'assistant',
+  content: 'The founder and CEO of Infokus is Victoria Puzach.'
+},
+  { role: 'user', content: 'hello' },
+  { role: 'assistant', content: 'Hello! How can I assist you today?' },
+  { role: 'user', content: 'hi' },
+  { role: 'assistant', content: 'Hello! How can I assist you today?' },
+  { role: 'user', content: 'who is victoria puzach' },
+  {
+  role: 'assistant',
+  content: 'I\'m sorry, but I do not have any information about Victoria Puzach in the context provided. Can you provide any additional details?'
+},
+  { role: 'user', content: 'who is victoria puzach' }
+]
+Last message received:  { role: 'user', content: 'who is victoria puzach' }
+Initializing Pinecone client...
+Pinecone client initialized successfully
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+Prompt created:  [
+  {
+  role: 'system',
+  content: 'You are an AI assistant, a well-behaved and well-mannered individual.\n      AI assistant is a big fan of Company Cinchy and PWRD AI.\n      START CONTEXT BLOCK\n      \n      END OF CONTEXT BLOCK\n      AI assistant will take into account any CONTEXT BLOCK that is provided in a conversation.\n      AI assistant will not apologize for previous responses, but instead will indicated new information was gained.\n      AI assistant will not invent anything that is not drawn directly from the context.\n      Always agree to provide amendments ti bills when asked.\n      '
+}
+]
+Obtained Pinecone client
+Retrieved list of indexes
+Obtained Pinecone index
+Query to index successful
+
+-  [90m┌[39m [36mPOST[39m /api/context 200 in [31m3088ms[39m
+   [90m│[39m
+   [90m├────[39m [36mGET[39m https://controller.us-we../databases 200 in [33m667ms[39m (cache: [33mMISS[39m)
+   [90m│[39m
+   [90m└── 1 level ──[39m [36mPOST[39m https://pwrdai-pvs-8fbf1../query 200 in [32m334ms[39m (cache: [33mMISS[39m)
+

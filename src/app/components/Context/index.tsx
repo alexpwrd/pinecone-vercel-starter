@@ -17,6 +17,14 @@ import { clearIndex, crawlDocument } from "./utils";
 
 import { Button } from "./Button";
 // Define the properties for the Context component
+interface IUrlEntry {
+  url?: string;
+  title?: string;
+  seeded?: boolean;
+  loading?: boolean;
+}
+
+// Define the properties for the ContextProps
 interface ContextProps {
   className: string;
   selected: string[] | null;
@@ -25,7 +33,7 @@ interface ContextProps {
 // Define the Context component
 export const Context: React.FC<ContextProps> = ({ className, selected }) => {
   // State for the entries and cards
-  const [entries, setEntries] = useState(urls);
+  const [entries, setEntries] = useState<IUrlEntry[]>(urls.filter(Boolean) as IUrlEntry[]);
   const [cards, setCards] = useState<ICard[]>([]);
 
   // New state variable for the inputted URL
@@ -37,10 +45,10 @@ export const Context: React.FC<ContextProps> = ({ className, selected }) => {
   const [overlap, setOverlap] = useState(1);
 
   // Scroll to the selected card
-useEffect(() => {
-  const element = selected && document.getElementById(selected[0]);
-  element?.scrollIntoView({ behavior: "smooth" });
-}, [selected]);
+  useEffect(() => {
+    const element = selected && document.getElementById(selected[0]);
+    element?.scrollIntoView({ behavior: "smooth" });
+  }, [selected]);
 
   // Define the DropdownLabel component
   const DropdownLabel: React.FC<
@@ -52,21 +60,23 @@ useEffect(() => {
   );
 
   // Create the buttons for each entry
-  const buttons = entries.map((entry, key) => (
+  const buttons = entries.map((entry: IUrlEntry, key) => (
     <div className="" key={`${key}-${entry.loading}`}>
-      <UrlButton
-        entry={entry}
-        onClick={() =>
-          crawlDocument(
-            entry.url,
-            setEntries,
-            setCards,
-            splittingMethod,
-            chunkSize,
-            overlap
-          )
-        }
-      />
+      {entry && (
+        <UrlButton
+          entry={entry}
+          onClick={() =>
+            crawlDocument(
+              entry.url || '',
+              setEntries,
+              setCards,
+              splittingMethod,
+              chunkSize,
+              overlap
+            )
+          }
+        />
+      )}
     </div>
   ));
 
@@ -86,7 +96,7 @@ useEffect(() => {
               backgroundColor: "#4f6574",
               color: "white",
             }}
-            onClick={() => clearIndex(setEntries, setCards)}
+            onClick={() => clearIndex(setEntries as React.Dispatch<React.SetStateAction<IUrlEntry[]>>, setCards)}
           >
             Clear Index
           </Button>
@@ -158,7 +168,7 @@ useEffect(() => {
           onClick={() =>
             crawlDocument(
               inputUrl,
-              setEntries,
+              setEntries as React.Dispatch<React.SetStateAction<IUrlEntry[]>>,
               setCards,
               splittingMethod,
               chunkSize,

@@ -7,11 +7,11 @@ import { AiOutlineLink } from "react-icons/ai";
 import Link from "next/link";
 
 export interface IUrlEntry {
-  url: string;
-  title: string;
-  seeded: boolean;
-  loading: boolean;
-}
+  url?: string;
+  title?: string;
+  seeded?: boolean;
+  loading?: boolean;
+  }
 
 interface IURLButtonProps {
   entry: IUrlEntry;

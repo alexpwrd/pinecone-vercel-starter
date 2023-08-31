@@ -1,7 +1,7 @@
 import { IUrlEntry } from "./UrlButton";
 import { ICard } from "./Card";
 import { TokenLimitSplitter } from "@/utils/TokenLimitSplitter"; // New import
-import { MarkdownTextSplitter } from '@pinecone-database/doc-splitter'; // Added import
+import { MarkdownTextSplitter, RecursiveCharacterTextSplitter } from '@pinecone-database/doc-splitter'; // Added import
 import logger from "../../utils/logger"; // Added logger import
 
 export async function crawlDocument(
@@ -21,6 +21,7 @@ export async function crawlDocument(
 
   // New code: Create the appropriate splitter based on the splitting method
   let splitter;
+  const chunkOverlap = overlap; // Added initializer for chunkOverlap
   switch (splittingMethod) {
     case 'recursive':
       splitter = new RecursiveCharacterTextSplitter({ chunkSize, chunkOverlap });

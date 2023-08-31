@@ -28,10 +28,15 @@ export async function POST(req: Request) {
     let context;
     try {
       context = await getContext(lastMessage.content, '');
-    } catch (e) {
+    } catch (e: any) {
       logger.error('Error retrieving context: ', e);
-      // Handle error, for example by returning an error response
-      return new Response('Error retrieving context', {status: 500});
+      // If no qualifying matches are found, set context to an empty string
+      if (e.message === 'No qualifying matches found') {
+        context = '';
+      } else {
+        // For other errors, return an error response
+        return new Response('Error retrieving context', {status: 500});
+      }
     }
 
     const prompt = [
@@ -63,7 +68,7 @@ export async function POST(req: Request) {
 
     // Respond with the stream
     return new StreamingTextResponse(stream)
-  } catch (e) {
+  } catch (e: any) {
     logger.error('Error occurred: ', e)
     throw (e)
   }
